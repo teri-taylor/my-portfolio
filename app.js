@@ -1,8 +1,8 @@
-const express = require('express');
-const path = require('path');
-const bodyParser = require('body-parser');
+const express = require('express'); // express framework for building web applications
+const path = require('path'); //path module to work with file paths
+const bodyParser = require('body-parser'); //middleware for parsing form data
 
-const app = express();
+const app = express(); //initialize an express application
 
 // Serve static files from the "public" directory
 app.use(express.static(path.join(__dirname, 'public')));
@@ -27,9 +27,9 @@ app.get('/contact', (req, res) => {
 
 // Handle form submission from Contact page
 app.post('/submit-form', (req, res) => {
-    const { firstName, lastName, email, message } = req.body;
-    console.log(`Form submitted by: ${firstName} ${lastName}, Email: ${email}, Message: ${message}`);
-    res.send('Thank you for your message!');  // You can replace this with a redirect or confirmation page.
+    const { firstName, lastName, email, message } = req.body; //extract form data from the request body
+    console.log(`Form submitted by: ${firstName} ${lastName}, Email: ${email}, Message: ${message}`); //log the form data to the console for server verification
+    res.send('Thank you for your message!');  // You can replace this with a redirect or confirmation page. // respond to client after form submission
 });
 
 // Start the server
