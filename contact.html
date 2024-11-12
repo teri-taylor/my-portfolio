@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <meta charset="UTF-8">
+            <link rel="stylesheet" href="style.css">
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Arsenal+SC:ital,wght@0,400;0,700;1,400;1,700&family=Moderustic:wght@300..800&family=Playwrite+DE+Grund:wght@100..400&display=swap" rel="stylesheet">
+            <title>About Me</title>
+        </head>
+
+        <body>
+            <div class="nav-container">
+                <nav class="navbar">
+                    <img class="white-logo" src="images/TT - white.png" alt="logo with my initials">
+                    <h1 class="page-title">Contact Me</h1>
+                    <div class="navbuttons">
+                        <a href="index.html" class="home">HOME</a>
+                        <a href="about.html" class="about-me" id="about-contact" >ABOUT ME</a>
+                    </div>
+                    
+                </nav>
+
+            </div>
+            
+            <!-- Form section for submitting a message -->
+            <div class="message-section">
+                <form action="submit-form" method="POST" class="contact-form">
+                    <!-- Input fields for the contact form (First Name, Last Name, Email, and Message) -->
+                    <input type="text" id="first-name" name="firstName" placeholder="First Name" required>
+                    
+                    <input type="text" id="last-name" name="lastName" placeholder="Last Name" required>
+                    
+                    <input type="email" id="email" name="email" placeholder="What's your email?" required>
+                    
+                    <textarea id="message" name="message" placeholder="Your message..." rows="4" required></textarea>
+                    
+                    <!-- Submit button for the form -->
+                    <button class="submit" type="submit">Submit</button>
+                </form>
+            </div>
+
+        </body>
+    </html>
